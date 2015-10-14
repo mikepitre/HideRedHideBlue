@@ -19,26 +19,38 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-Zm-eUX">
                                 <rect key="frame" x="20" y="308" width="335" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Hide Red"/>
+                                <state key="normal" title="Hide Red">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideRedCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqW-rQ-zZ2"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-car-vintage-old" translatesAutoresizingMaskIntoConstraints="NO" id="e0f-9v-Rbh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="280"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue-car-vehicle-vintage" translatesAutoresizingMaskIntoConstraints="NO" id="qJh-va-07d">
-                                <rect key="frame" x="0.0" y="346" width="375" height="262"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOb-Yu-ceY">
                                 <rect key="frame" x="20" y="617" width="335" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Hide Blue"/>
+                                <connections>
+                                    <action selector="hideBlueCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YMG-c3-mzP"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue-car-vehicle-vintage" translatesAutoresizingMaskIntoConstraints="NO" id="qJh-va-07d">
+                                <rect key="frame" x="0.0" y="346" width="375" height="262"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-car-vintage-old" translatesAutoresizingMaskIntoConstraints="NO" id="e0f-9v-Rbh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="280"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueCar" destination="qJh-va-07d" id="GGv-Oh-CTx"/>
+                        <outlet property="redCar" destination="e0f-9v-Rbh" id="XFs-L7-j6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
